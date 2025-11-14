@@ -1,0 +1,16 @@
+# Request
+string package_name          # ROS2-Paket mit der composable node
+string plugin_name           # Plugin-Name für die composable node (z.B. "composition::Talker")
+string node_name             # Angegebener Name des Nodes (optional)
+string node_namespace        # Namespace des Nodes (optional)
+uint8 log_level              # Log-Level für die Node (optional, 0=default)
+string[] remap_rules         # Remapping Regeln (optional)
+rcl_interfaces/Parameter[] parameters          # Parameter für die Node (optional)
+rcl_interfaces/Parameter[] extra_arguments      # Extra arguments für den Container (optional)
+
+---
+# Response
+bool success                # true, wenn erfolgreich geladen
+string error_message        # Fehlerbeschreibung, falls nicht erfolgreich
+string full_node_name       # Voller Name inkl. Namespace
+uint64 unique_id            # Eindeutige ID der geladenen Komponente
